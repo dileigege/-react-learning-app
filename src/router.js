@@ -5,7 +5,7 @@
  * @Author: Oneself
  * @Date: 2021-02-05 17:55:21
  * @LastEditors: Oneself
- * @LastEditTime: 2021-02-08 13:35:10
+ * @LastEditTime: 2021-02-08 13:37:37
  * @Statu: TODO:
  */
 
@@ -35,7 +35,6 @@ class RouterComponent extends React.Component {
           {/* 匹配路由  */}
           <Route path='/' exact component={IndexComponent}></Route>
           <Route path='/news' component={NewsComponent}></Route>
-
         </React.Fragment>
         </Router>
       </React.Fragment>
