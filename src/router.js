@@ -5,7 +5,7 @@
  * @Author: Oneself
  * @Date: 2021-02-05 17:55:21
  * @LastEditors: Oneself
- * @LastEditTime: 2021-02-08 13:37:37
+ * @LastEditTime: 2021-02-08 16:35:27
  * @Statu: TODO:
  */
 
@@ -25,7 +25,8 @@ import { HashRouter as Router,Route } from "react-router-dom";
 //  页面路由 
 import asyncComponents from './components/async/AsyncComponent';
 const IndexComponent=asyncComponents(()=>import('./pages/index/index'));
-const NewsComponent=asyncComponents(()=>import('./pages/index/index'));
+const NewsComponent=asyncComponents(()=>import('./pages/news/index'));
+const LayoutComponent=asyncComponents(()=>import('./pages/Layout/index'));
 class RouterComponent extends React.Component {
   render() {
     return (
@@ -33,7 +34,8 @@ class RouterComponent extends React.Component {
         <Router>
         <React.Fragment>
           {/* 匹配路由  */}
-          <Route path='/' exact component={IndexComponent}></Route>
+          <Route path='/' exact component={LayoutComponent}></Route>
+          <Route path='/index' component={IndexComponent}></Route>
           <Route path='/news' component={NewsComponent}></Route>
         </React.Fragment>
         </Router>
