@@ -5,17 +5,20 @@
  * @Author: Oneself
  * @Date: 2021-02-08 11:00:05
  * @LastEditors: Oneself
- * @LastEditTime: 2021-02-08 13:03:04
+ * @LastEditTime: 2021-02-08 16:19:35
  * @Statu: TODO: 
  */
 import React, { Component } from 'react'
-import css from  '../../assets/css/index/home.css'
+import { Button } from 'antd';
+// import '../../assets/css/index/home.less'
+import css from '../../assets/css/index/home.less';
 console.log(css)
+
 export class index extends Component {
     render() {
         return (
-            <div class='app'>
-                <div class={css['homer']}> index模块 </div>
+            <div className='app'>
+                <Button type="primary">Primary Button</Button>
             </div>
         )
     }
