@@ -420,7 +420,8 @@ module.exports = function (webpackEnv) {
                       },
                     },
                   ],
-                  isEnvDevelopment &&
+                   'react-html-attrs',//解决clasName的问题
+                    isEnvDevelopment &&
                     shouldUseReactRefresh &&
                     require.resolve('react-refresh/babel'),
                 ].filter(Boolean),
@@ -472,9 +473,12 @@ module.exports = function (webpackEnv) {
               exclude: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
+                // modules: true, // 开启模块化
+                // localIdentName: '[local]__[name]--[hash:base64:5]',
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
+
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
